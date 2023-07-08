@@ -1,0 +1,16 @@
+<h1> Gokul </h1>
+
+<% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
+
+<%= form_tag handle_form_path, method: :post do |f| %>
+
+    <%= text_field_tag :name %>
+  
+    <%= file_field_tag :file %>
+  
+    <%= submit_tag 'Upload' %>
+<% end %>
